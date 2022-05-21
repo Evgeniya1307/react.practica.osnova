@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+
 import Ccomponent from './Ccomponent';
 
 
@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <Ccomponent name=' Polina' />
+       <Ccomponent /> 
+     
        
         <img src={logo} className="App-logo" alt="logo" />
         <p>
