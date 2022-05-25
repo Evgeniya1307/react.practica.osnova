@@ -119,9 +119,10 @@
 //   }
 // }
 
-// делаю todo react
+// делаю todo react 
 
 import React, { Component } from "react";
+import './stylesNew.css'
 
 export default class Ccomponent extends Component {
   constructor(props) {
@@ -129,11 +130,11 @@ export default class Ccomponent extends Component {
 
     this.state = {
       input: "",
-      items: [],
+      items: [] // массив в который будут добавляться элементы
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSumbit = this.handleSumbit.bind(this);
+    this.handleSumbit = this.handleSumbit.bind(this); 
   }
 
   handleChange(event) {
@@ -143,17 +144,20 @@ export default class Ccomponent extends Component {
   }
 
   handleSumbit(event) {
-    event.preventDefault();
+    event.preventDefault(); //
     this.setState({
       input: this.state.input,
-      items: [...this.state.items, this.state.input],
+      items: [...this.state.items, this.state.input], // будет меняться состояние
     });
   }
 
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSumbit}>
+
+      <h1 className="hello" >Hello world</h1>
+       <button variant = "contained" color="primary">Primary</button>
+      <form onSubmit={this.handleSumbit}>
           <input value={this.state.input} onChange={this.handleChange} />
           <button type="sumbit">Sumbit!</button>
         </form>
@@ -167,3 +171,18 @@ export default class Ccomponent extends Component {
     );
   }
 }
+
+
+
+
+
+
+
+//  js <h1 style={{color: 'ellow', backgroundColor:'green'}}>Hello world</h1>
+//react  <h1 className="hello" >Hello world</h1>
+//import './stylesNew.css'
+//.hello{
+//   color: aquamarine;
+//   background-color: blue;
+//   font-size: 60px;
+// }
