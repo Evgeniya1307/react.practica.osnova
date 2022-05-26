@@ -121,56 +121,59 @@
 
 // делаю todo react 
 
-import React, { Component } from "react";
-import './stylesNew.css'
+// import React, { Component } from "react";
+// import './stylesNew.css'
+// import Fcomponent from "./Fcomponent";
 
-export default class Ccomponent extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      input: "",
-      items: [] // массив в который будут добавляться элементы
-    };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSumbit = this.handleSumbit.bind(this); 
-  }
+// export default class Ccomponent extends Component {
+//   constructor(props) {
+//     super(props);
 
-  handleChange(event) {
-    this.setState({
-      input: event.target.value,
-    });
-  }
+//     this.state = {
+//       input: "",
+//       items: [] // массив в который будут добавляться элементы
+//     };
 
-  handleSumbit(event) {
-    event.preventDefault(); //
-    this.setState({
-      input: this.state.input,
-      items: [...this.state.items, this.state.input], // будет меняться состояние
-    });
-  }
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleSumbit = this.handleSumbit.bind(this); 
+//   }
 
-  render() {
-    return (
-      <div>
+//   handleChange(event) {
+//     this.setState({
+//       input: event.target.value,
+//     });
+//   }
 
-      <h1 className="hello" >Hello world</h1>
-       <button variant = "contained" color="primary">Primary</button>
-      <form onSubmit={this.handleSumbit}>
-          <input value={this.state.input} onChange={this.handleChange} />
-          <button type="sumbit">Sumbit!</button>
-        </form>
+//   handleSumbit(event) {
+//     event.preventDefault(); //
+//     this.setState({
+//       input: this.state.input,
+//       items: [...this.state.items, this.state.input], // будет меняться состояние
+//     });
+//   }
 
-        <ul>
-          {this.state.items.map((item, index) => {
-            <li key={index}>{item}</li>;
-          })}
-        </ul>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+
+//       <h1 className="hello" >Hello world</h1>
+//        <button variant = "contained" color="primary">Primary</button>
+//       <form onSubmit={this.handleSumbit}>
+//           <input value={this.state.input} onChange={this.handleChange} />
+//           <button type="sumbit">Sumbit!</button>
+//         </form>
+
+//         <ul>
+//           {this.state.items.map((item, index) => {
+//             <li key={index}>{item}</li>;
+//           })}
+//         </ul>
+//       </div>
+//     );
+//   }
+// }
 
 
 
@@ -186,3 +189,34 @@ export default class Ccomponent extends Component {
 //   background-color: blue;
 //   font-size: 60px;
 // }
+
+
+
+
+
+// передача данных от родителя к дочерним
+import React, { Component } from 'react'
+import './stylesNew.css'
+import Fcomponent from './Fcomponent'
+
+
+
+export default class Ccomponent extends Component {
+ 
+  constructor (props){
+    super(props)
+    this.state = {
+name: 'Web Dew Blog'
+    }
+  }
+ 
+ 
+ 
+  render() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
+}
